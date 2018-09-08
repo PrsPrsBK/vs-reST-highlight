@@ -1,0 +1,48 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "reST",
+  "patterns": [
+    {
+      "include": "#href"
+    },
+    {
+      "include": "#yyyyMMdd"
+    },
+    {
+      "include": "#HHmmss"
+    }
+  ],
+  "repository": {
+    "href": {
+      "patterns": [{
+        "name": "markup.underline.link",
+        "begin": "(?<!`)`[^_`][^`]+",
+        "end": "`__"
+      }
+      ]
+    },
+    "yyyyMMdd": {
+      "patterns": [{
+        "match": "([0-9]{4}-[0-9]{2}-[0-9]{2})",
+        "captures": {
+          "1": {
+            "name": "constant.other"
+          }
+        }
+      }
+      ]
+    },
+    "HHmmss": {
+      "patterns": [{
+        "match": "([0-9]{2}:[0-9]{2}:[0-9]{2})",
+        "captures": {
+          "1": {
+            "name": "constant.other"
+          }
+        }
+      }
+      ]
+    }
+  },
+  "scopeName": "text.reST"
+}

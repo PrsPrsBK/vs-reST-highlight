@@ -1,0 +1,26 @@
+{
+  "name": "vs-reST-highlight",
+  "displayName": "reST-highlight",
+  "description": "Maybe enough syntax highlighting for reST.",
+  "version": "0.0.1",
+  "publisher": "PrsPrsBK",
+  "engines": {
+    "vscode": "^1.27.1"
+  },
+  "categories": [
+    "Languages"
+    ],
+    "contributes": {
+      "languages": [{
+        "id": "reST",
+        "aliases": ["reST", "reStructuredText"],
+        "extensions": [".rst"],
+        "configuration": "./language-configuration.json"
+      }],
+      "grammars": [{
+        "language": "reST",
+        "scopeName": "text.reST",
+        "path": "./syntaxes/reST.tmLanguage.json"
+      }]
+    }
+}
