@@ -3,6 +3,9 @@
   "name": "reST",
   "patterns": [
     {
+      "include": "#heading"
+    },
+    {
       "include": "#href"
     },
     {
@@ -13,6 +16,18 @@
     }
   ],
   "repository": {
+    "heading": {
+      "patterns": [
+        {
+          "match": "^((=|-|#){4,})$",
+          "captures": {
+            "1": {
+              "name": "markup.heading"
+            }
+          }
+        }
+      ]
+    },
     "href": {
       "patterns": [{
         "name": "markup.underline.link",
