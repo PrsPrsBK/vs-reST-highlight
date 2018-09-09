@@ -43,7 +43,7 @@
       "patterns": [
         {
           "name": "markup.underline.link",
-          "begin": "(?<!`)`[^_`][^`]+",
+          "begin": "(?<!`)`[^_`][^`<]+(?=<)",
           "end": "`_"
         }
       ]
