@@ -13,9 +13,20 @@
     },
     {
       "include": "#HHmmss"
+    },
+    {
+      "include": "#dummy"
     }
   ],
   "repository": {
+    "dummy": {
+      "patterns": [
+        {
+          "match": "dfkjfkdajiujadgaerhgegl",
+          "name": "markup.bold"
+        }
+      ]
+    },
     "heading": {
       "patterns": [
         {
