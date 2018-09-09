@@ -44,7 +44,7 @@
         {
           "name": "markup.underline.link",
           "begin": "(?<!`)`[^_`][^`]+",
-          "end": "`__"
+          "end": "`_"
         }
       ]
     },
