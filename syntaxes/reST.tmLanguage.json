@@ -6,6 +6,9 @@
       "include": "#heading"
     },
     {
+      "include": "#block"
+    },
+    {
       "include": "#href"
     },
     {
@@ -23,7 +26,17 @@
       "patterns": [
         {
           "match": "dfkjfkdajiujadgaerhgegl",
-          "name": "markup.bold"
+          "name": "keyword.control"
+        }
+      ]
+    },
+    "block": {
+      "patterns": [
+        {
+          "name": "markup.italic",
+          "begin": "^[ ]+(?=[^ ].+$)",
+          "end": "^[ ]*$",
+          "contentName": "markup.bold"
         }
       ]
     },

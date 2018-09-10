@@ -4,7 +4,7 @@ Sample of reST
 
 dfkjfkdajiujadgaerhgegl
 
-  this should be 1st line of block
+  A this should be 1st line of block
   afkdlA testtesttest `some <https://example.com/short>`_
   one more `a <url>`_ bar
   we exclude the case of `multiline link
@@ -72,5 +72,5 @@ Ch2
 
 If we failed, this zone is interpreted as a part of link.
 `link stopped? <https://example.com/ohno>`_
-does we recover?
+Are we recovered here?
 
