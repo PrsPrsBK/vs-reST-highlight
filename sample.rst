@@ -14,6 +14,16 @@ dfkjfkdajiujadgaerhgegl
 ch1
 --------------
 
+.. image:: some0.jpg
+
+.. image:: some1.jpg
+   :height: 100px
+   :width: 120px
+   :unknown: some
+   :align: right
+
+oh image directive.
+
 * `link in listitem <https://example.com/link01/>`__ EEEEE.
 * インストールする ``C:\Program Files\sample\`` 選べる。
   2018-03-21 continuing line ``D:\bin\example\1.0.0\sample.exe``

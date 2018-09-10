@@ -9,6 +9,9 @@
       "include": "#block"
     },
     {
+      "include": "#dirImage"
+    },
+    {
       "include": "#href"
     },
     {
@@ -37,6 +40,39 @@
           "begin": "^[ ]+(?=[^ ].+$)",
           "end": "^[ ]*$",
           "contentName": "markup.bold"
+        }
+      ]
+    },
+    "dirImage": {
+      "patterns": [
+        {
+          "name": "markup.italic",
+          "begin": "^\\.\\. image:: .+",
+          "end": "^$",
+          "patterns": [
+            {
+              "include": "#flWidth"
+            },
+            {
+              "include": "#fieldList"
+            }
+          ]
+        }
+      ]
+    },
+    "flWidth": {
+      "patterns": [
+        {
+          "name": "keyword.control",
+          "match": "^ +:width: [\\s\\S]+$"
+        }
+      ]
+    },
+    "fieldList": {
+      "patterns": [
+        {
+          "name": "constant.regexp",
+          "match": "^ +:\\w+: [\\s\\S]+$"
         }
       ]
     },
