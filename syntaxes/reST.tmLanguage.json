@@ -63,10 +63,13 @@
     "flWidth": {
       "patterns": [
         {
-          "match": "^ +:(width): [\\s\\S]+$",
+          "match": "^ +:(width): (.+)$",
           "captures": {
             "1": {
               "name": "variable.name"
+            },
+            "2": {
+              "name": "constant.other"
             }
           }
         }
