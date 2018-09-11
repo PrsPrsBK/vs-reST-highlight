@@ -51,12 +51,30 @@
           "end": "^$",
           "patterns": [
             {
+              "include": "#flHeight"
+            },
+            {
               "include": "#flWidth"
             },
             {
               "include": "#fieldList"
             }
           ]
+        }
+      ]
+    },
+    "flHeight": {
+      "patterns": [
+        {
+          "match": "^ +:(height): (.+)$",
+          "captures": {
+            "1": {
+              "name": "variable.name"
+            },
+            "2": {
+              "name": "constant.other"
+            }
+          }
         }
       ]
     },
