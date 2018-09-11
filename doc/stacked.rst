@@ -17,9 +17,9 @@ So logging was necessary.
 Begin with inspection of the block with indentation
 --------------------------------------------------------------------------------
 
-'begin' part is first indent (only space, exclude tab).
-'end' part is blank line, or line contains only spaces.
-'contentName' part is remain, starts from the head of non-space part of first line.
+* 'begin' part is first indent (only space, exclude tab).
+* 'end' part is blank line, or line contains only spaces.
+* Remains are correspond to 'contentName' part, starts from the head of non-space part of first line.
 
 
 .. code-block:: rst
@@ -36,7 +36,7 @@ Begin with inspection of the block with indentation
   This part is not block again.
 
 
-.. code-blocks:: json
+.. code-block:: json
 
    {
      "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
@@ -81,7 +81,7 @@ I confirmed that the duplication of name 'fieldsome' did not exist.
       :align: right
 
 
-.. code-blocks:: json
+.. code-block:: json
 
    {
      "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
@@ -125,7 +125,7 @@ We must adhere parent 'repository', like a code below.
 The bad thing was, this behavior did not consist with textmate's document.
 
 
-.. code-blocks:: json
+.. code-block:: json
 
    {
      "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
