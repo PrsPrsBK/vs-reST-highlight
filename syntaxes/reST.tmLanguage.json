@@ -51,10 +51,22 @@
           "end": "^$",
           "patterns": [
             {
+              "include": "#flAlt"
+            },
+            {
               "include": "#flHeight"
             },
             {
               "include": "#flWidth"
+            },
+            {
+              "include": "#flScale"
+            },
+            {
+              "include": "#flAlign"
+            },
+            {
+              "include": "#flTarget"
             },
             {
               "include": "#fieldList"
@@ -63,10 +75,70 @@
         }
       ]
     },
+    "flAlign": {
+      "patterns": [
+        {
+          "match": "^ +:(align): (.+)$",
+          "captures": {
+            "1": {
+              "name": "variable.name"
+            },
+            "2": {
+              "name": "string.unquoted"
+            }
+          }
+        }
+      ]
+    },
+    "flAlt": {
+      "patterns": [
+        {
+          "match": "^ +:(alt): (.+)$",
+          "captures": {
+            "1": {
+              "name": "variable.name"
+            },
+            "2": {
+              "name": "string.unquoted"
+            }
+          }
+        }
+      ]
+    },
     "flHeight": {
       "patterns": [
         {
           "match": "^ +:(height): (.+)$",
+          "captures": {
+            "1": {
+              "name": "variable.name"
+            },
+            "2": {
+              "name": "constant.other"
+            }
+          }
+        }
+      ]
+    },
+    "flScale": {
+      "patterns": [
+        {
+          "match": "^ +:(scale): (.+)$",
+          "captures": {
+            "1": {
+              "name": "variable.name"
+            },
+            "2": {
+              "name": "constant.other"
+            }
+          }
+        }
+      ]
+    },
+    "flTarget": {
+      "patterns": [
+        {
+          "match": "^ +:(target): (.+)$",
           "captures": {
             "1": {
               "name": "variable.name"

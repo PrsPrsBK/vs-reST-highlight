@@ -26,6 +26,12 @@ ch1
    :width: 120px
    :unknown: some
    :align: right
+   :class: some
+   :name: 100%
+   :unknown: some
+   :scale: 100%
+   :alt: some
+   :target: https://example.com/some.jpg
 
 oh image directive.
 
