@@ -4,12 +4,17 @@ Sample of reST
 
 dfkjfkdajiujadgaerhgegl
 
+This part is not block.
+
   A this should be 1st line of block
   afkdlA testtesttest `some <https://example.com/short>`_
   one more `a <url>`_ bar
   we exclude the case of `multiline link
   <https://example.com/multiline>`_
   1stBlocksLastLine
+
+This part is not block again.
+
 
 ch1
 --------------
