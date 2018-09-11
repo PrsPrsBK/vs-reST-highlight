@@ -158,7 +158,7 @@ The bad thing was, this behavior did not consist with textmate's document.
            }
          ]
        }
-     }
+     },
      "scopeName": "text.reST"
    }
 
