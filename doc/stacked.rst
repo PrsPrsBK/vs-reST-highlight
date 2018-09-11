@@ -62,12 +62,11 @@ Begin with inspection of the block with indentation
    }
 
 
-We cannot use local "repository" key
+We can use local "repository" key
 --------------------------------------------------------------------------------
 
 
-In the following code block, ``fieldsome`` inside 'dirImage' had never been recognized.
-I confirmed that the duplication of name 'fieldsome' did not exist.
+In the following simplified code block, ``fieldsome`` inside 'dirImage' can be recognized.
 
 
 .. code-block:: rst
@@ -115,14 +114,13 @@ I confirmed that the duplication of name 'fieldsome' did not exist.
              ]
            }
          }
-       },
+       }
      },
      "scopeName": "text.reST"
    }
 
 
-We must adhere parent 'repository', like a code below.
-The bad thing was, this behavior did not consist with textmate's document.
+We also use parent 'repository', like a code below.
 
 
 .. code-block:: json
