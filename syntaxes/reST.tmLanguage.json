@@ -63,16 +63,24 @@
     "flWidth": {
       "patterns": [
         {
-          "name": "keyword.control",
-          "match": "^ +:width: [\\s\\S]+$"
+          "match": "^ +:(width): [\\s\\S]+$",
+          "captures": {
+            "1": {
+              "name": "variable.name"
+            }
+          }
         }
       ]
     },
     "fieldList": {
       "patterns": [
         {
-          "name": "constant.regexp",
-          "match": "^ +:\\w+: [\\s\\S]+$"
+          "match": "^ +:(\\w+): [\\s\\S]+$",
+          "captures": {
+            "1": {
+              "name": "invalid.deprecated"
+            }
+          }
         }
       ]
     },
