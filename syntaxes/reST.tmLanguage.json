@@ -16,26 +16,9 @@
     },
     {
       "include": "#href"
-    },
-    {
-      "include": "#yyyyMMdd"
-    },
-    {
-      "include": "#HHmmss"
-    },
-    {
-      "include": "#dummy"
     }
   ],
   "repository": {
-    "dummy": {
-      "patterns": [
-        {
-          "match": "dfkjfkdajiujadgaerhgegl",
-          "name": "keyword.control"
-        }
-      ]
-    },
     "block": {
       "patterns": [
         {
@@ -230,30 +213,6 @@
           "name": "markup.underline.link",
           "begin": "(?<!`)`[^_`][^`<]+(?=<)",
           "end": "`_"
-        }
-      ]
-    },
-    "yyyyMMdd": {
-      "patterns": [
-        {
-          "match": "([0-9]{4}-[0-9]{2}-[0-9]{2})",
-          "captures": {
-            "1": {
-              "name": "constant.other"
-            }
-          }
-        }
-      ]
-    },
-    "HHmmss": {
-      "patterns": [
-        {
-          "match": "([0-9]{2}:[0-9]{2}:[0-9]{2})",
-          "captures": {
-            "1": {
-              "name": "constant.other"
-            }
-          }
         }
       ]
     }

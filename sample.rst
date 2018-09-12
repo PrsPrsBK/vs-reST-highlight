@@ -2,7 +2,6 @@
 Sample of reST
 ========================================
 
-dfkjfkdajiujadgaerhgegl
 
 This part is not block.
 
