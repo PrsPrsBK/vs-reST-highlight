@@ -4,6 +4,29 @@ Stacked ones
 
 
 --------------------------------------------------------------------------------
+Rational
+--------------------------------------------------------------------------------
+
+Why author start this
+----------------------------------------
+I tried to use two extensions for this editor.
+Syntax higilight had gone ruin on both extensions.
+The problem was miss-highlight for link.
+Single backquote (`) within code-block was handled as 'beginning of link',
+so from that point to next appearance of 'end of link', 
+highlight was stretching all the way.
+
+I neither wrote complex reST documents nor needed aggressive highlight.
+So if possible, fixing existing one was desirable.
+But it was not possible.
+Because they did not handle 'block' and 
+needed to change 'link' from multiline-capable to singleline-limited to fix the problem, 
+it must to have broken very many user's workspace.
+
+I gave up that plan, and shifted to this project.
+
+
+--------------------------------------------------------------------------------
 Facts
 --------------------------------------------------------------------------------
 
