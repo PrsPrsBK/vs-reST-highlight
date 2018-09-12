@@ -3,38 +3,34 @@
   "name": "reST",
   "patterns": [
     {
-      "include": "#headingSandwich"
-    },
-    {
-      "include": "#headingMarker"
-    },
-    {
-      "include": "#block"
-    },
-    {
-      "include": "#dirImage"
-    },
-    {
-      "include": "#directive"
-    },
-    {
-      "include": "#href"
-    },
-    {
-      "include": "#escapedBq"
+      "begin": "^[ ]*(?=[^ ].+$)",
+      "end": "^[ ]*$",
+      "patterns": [
+        {
+          "include": "#headingMarker"
+        },
+        {
+          "include": "#dirImage"
+        },
+        {
+          "include": "#directive"
+        },
+        {
+          "include": "#href"
+        },
+        {
+          "include": "#escapedBq"
+        },
+        {
+          "include": "#fieldList"
+        },
+        {
+          "include": "$self"
+        }
+      ]
     }
   ],
   "repository": {
-    "block": {
-      "patterns": [
-        {
-          "name": "markup.italic",
-          "begin": "^[ ]+(?=[^ ].+$)",
-          "end": "^[ ]*$",
-          "contentName": "markup.bold"
-        }
-      ]
-    },
     "dirImage": {
       "patterns": [
         {
@@ -102,7 +98,7 @@
     "escapedBq": {
       "patterns": [
         {
-          "name": "constant.character.escape",
+          "name": "invalid.deprecated",
           "match": "\\`"
         }
       ]
@@ -218,23 +214,6 @@
               "name": "markup.heading"
             }
           }
-        }
-      ]
-    },
-    "headingSandwich": {
-      "patterns": [
-        {
-          "name": "markup.raw",
-          "begin": "^(?=(=|-|#){4,}$)",
-          "end": "^$",
-          "patterns": [
-            {
-              "include": "#headingMarker"
-            },
-            {
-              "include": "#fieldList"
-            }
-          ]
         }
       ]
     },
