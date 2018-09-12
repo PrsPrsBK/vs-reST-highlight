@@ -3,7 +3,10 @@
   "name": "reST",
   "patterns": [
     {
-      "include": "#heading"
+      "include": "#headingSandwich"
+    },
+    {
+      "include": "#headingMarker"
     },
     {
       "include": "#block"
@@ -206,7 +209,7 @@
         }
       ]
     },
-    "heading": {
+    "headingMarker": {
       "patterns": [
         {
           "match": "^((=|-|#){4,})$",
@@ -215,6 +218,23 @@
               "name": "markup.heading"
             }
           }
+        }
+      ]
+    },
+    "headingSandwich": {
+      "patterns": [
+        {
+          "name": "markup.raw",
+          "begin": "^(?=(=|-|#){4,}$)",
+          "end": "^$",
+          "patterns": [
+            {
+              "include": "#headingMarker"
+            },
+            {
+              "include": "#fieldList"
+            }
+          ]
         }
       ]
     },

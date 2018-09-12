@@ -1,7 +1,8 @@
 ========================================
 Sample of reST
 ========================================
-
+  :author: me
+  :some: thing
 
 This part is not indented block.
   And including this line as 'not included'.
