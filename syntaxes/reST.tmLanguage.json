@@ -6,27 +6,13 @@
       "begin": "^[ ]*(?=[^ ].+$)",
       "end": "^[ ]*$",
       "patterns": [
-        {
-          "include": "#headingMarker"
-        },
-        {
-          "include": "#dirImage"
-        },
-        {
-          "include": "#directive"
-        },
-        {
-          "include": "#href"
-        },
-        {
-          "include": "#escapedBq"
-        },
-        {
-          "include": "#fieldList"
-        },
-        {
-          "include": "$self"
-        }
+        { "include": "#headingMarker" },
+        { "include": "#dirImage" },
+        { "include": "#directive" },
+        { "include": "#href" },
+        { "include": "#escapedBq" },
+        { "include": "#fieldList" },
+        { "include": "$self" }
       ]
     }
   ],
@@ -38,27 +24,13 @@
           "begin": "^\\.\\. image:: .+",
           "end": "^$",
           "patterns": [
-            {
-              "include": "#flAlt"
-            },
-            {
-              "include": "#flHeight"
-            },
-            {
-              "include": "#flWidth"
-            },
-            {
-              "include": "#flScale"
-            },
-            {
-              "include": "#flAlign"
-            },
-            {
-              "include": "#flTarget"
-            },
-            {
-              "include": "#fieldList"
-            }
+            { "include": "#flAlt" },
+            { "include": "#flHeight" },
+            { "include": "#flWidth" },
+            { "include": "#flScale" },
+            { "include": "#flAlign" },
+            { "include": "#flTarget" },
+            { "include": "#fieldList" }
           ]
         }
       ]
@@ -70,12 +42,8 @@
           "begin": "^\\.\\. (?=[-\\w]+:: +.*$)",
           "end": "^$",
           "patterns": [
-            {
-              "include": "#dirMarkerLine"
-            },
-            {
-              "include": "#fieldList"
-            }
+            { "include": "#dirMarkerLine" },
+            { "include": "#fieldList" }
           ]
         }
       ]
