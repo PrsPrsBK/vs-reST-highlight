@@ -88,7 +88,6 @@ Begin with inspection of the block with indentation
 We can use local "repository" key
 --------------------------------------------------------------------------------
 
-
 In the following simplified code block, ``fieldsome`` inside 'dirImage' can be recognized.
 
 
@@ -182,5 +181,15 @@ We also use parent 'repository', like a code below.
      },
      "scopeName": "text.reST"
    }
+
+
+At first, 'Heading' has two type as block
+--------------------------------------------------------------------------------
+
+Maybe this is changed after non-indented block implemented.
+
+* One begins with marker line. (if exists, detected at first, as heading block)
+* Another begins with heading text. (just as normal non-indented block, not as heading block)
+* Both can not be indented. (this may be not good)
 
 
