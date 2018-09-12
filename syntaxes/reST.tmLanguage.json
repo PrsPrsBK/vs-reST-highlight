@@ -9,8 +9,7 @@
         { "include": "#headingMarker" },
         { "include": "#directive" },
         { "include": "#href" },
-        { "include": "#fieldList" },
-        { "include": "$self" }
+        { "include": "#fieldList" }
       ]
     }
   ],

@@ -11,8 +11,9 @@ This part is not indented block.
   A this should be 1st line of block
   afkdlA testtesttest `some <https://example.com/short>`_
   one more `a <url>`_ bar
-  we exclude the case of `multiline link
+  At initial stage, we had excluded the case of `multiline link
   <https://example.com/multiline>`_
+  but later shifted to include it.
   1stBlocksLastLine
 
 This part is not \`indented\` block again.
