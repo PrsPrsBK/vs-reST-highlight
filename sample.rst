@@ -3,7 +3,9 @@ Sample of reST
 ========================================
 
 
-This part is not block.
+This part is not indented block.
+  And including this line as 'not included'.
+  That is continuing until blank line or only-space line.
 
   A this should be 1st line of block
   afkdlA testtesttest `some <https://example.com/short>`_
@@ -12,7 +14,7 @@ This part is not block.
   <https://example.com/multiline>`_
   1stBlocksLastLine
 
-This part is not block again.
+This part is not \`indented\` block again.
 
 
 ch1
