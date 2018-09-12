@@ -16,6 +16,9 @@
     },
     {
       "include": "#href"
+    },
+    {
+      "include": "#escapedBq"
     }
   ],
   "repository": {
@@ -90,6 +93,14 @@
               "name": "string.unquoted"
             }
           }
+        }
+      ]
+    },
+    "escapedBq": {
+      "patterns": [
+        {
+          "name": "constant.character.escape",
+          "match": "\\`"
         }
       ]
     },
