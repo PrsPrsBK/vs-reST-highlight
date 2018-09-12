@@ -3,7 +3,7 @@ This block is not colored, because NOT INDENTED.
 DELIMITED WITH BLANK LINE.
 
   We detect indented block so colored red.
-  HOT POINT IS HERE ---->  <---- State 1. Now no char is set.
+  HOT POINT IS HERE ----|  |---- State 1. Now no char is set.
   THIS_IS_DUMMY_AS_MARKER
   still indented here.
 
