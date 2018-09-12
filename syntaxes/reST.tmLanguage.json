@@ -3,66 +3,21 @@
   "name": "reST",
   "patterns": [
     {
-      "begin": "^[ ]*(?=[^ ].+$)",
-      "end": "^[ ]*$",
+      "name" : "invalid.deprecated",
+      "begin": "^[ ]+(?=[^ ].+$)",
+      "end": "^$",
       "patterns": [
-        { "include": "#headingMarker" },
-        { "include": "#directive" },
         { "include": "#href" },
-        { "include": "#fieldList" }
+        { "include": "#dummyText" }
       ]
     }
   ],
   "repository": {
-    "directive": {
+    "dummyText": {
       "patterns": [
         {
-          "name": "markup.raw",
-          "begin": "^\\.\\. (?=[-\\w]+:: +.*$)",
-          "end": "^$",
-          "patterns": [
-            { "include": "#dirMarkerLine" },
-            { "include": "#fieldList" }
-          ]
-        }
-      ]
-    },
-    "dirMarkerLine": {
-      "patterns": [
-        {
-          "match": "([-\\w]+):: (.*)",
-          "captures": {
-            "1": {
-              "name": "variable.name"
-            },
-            "2": {
-              "name": "string.unquoted"
-            }
-          }
-        }
-      ]
-    },
-    "fieldList": {
-      "patterns": [
-        {
-          "match": "^ +:(\\w+): [\\s\\S]+$",
-          "captures": {
-            "1": {
-              "name": "variable.name"
-            }
-          }
-        }
-      ]
-    },
-    "headingMarker": {
-      "patterns": [
-        {
-          "match": "^((=|-|#){4,})$",
-          "captures": {
-            "1": {
-              "name": "markup.heading"
-            }
-          }
+          "name": "markup.bold",
+          "match": "THIS_IS_DUMMY_AS_MARKER"
         }
       ]
     },
@@ -70,8 +25,8 @@
       "patterns": [
         {
           "name": "markup.underline.link",
-          "begin": "(?<![`\\\\])`[^_`][^<]+(?=<)",
-          "end": "`_"
+          "begin": "(?<![`\\\\])`[^_`]",
+          "end": "<[^>]+>`_"
         }
       ]
     }
