@@ -9,7 +9,6 @@
         { "include": "#headingMarker" },
         { "include": "#directive" },
         { "include": "#href" },
-        { "include": "#escapedBq" },
         { "include": "#fieldList" },
         { "include": "$self" }
       ]
@@ -41,14 +40,6 @@
               "name": "string.unquoted"
             }
           }
-        }
-      ]
-    },
-    "escapedBq": {
-      "patterns": [
-        {
-          "name": "constant.character.escape",
-          "match": "\\`"
         }
       ]
     },
