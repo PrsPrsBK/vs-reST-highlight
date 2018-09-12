@@ -12,6 +12,9 @@
       "include": "#dirImage"
     },
     {
+      "include": "#directive"
+    },
+    {
       "include": "#href"
     },
     {
@@ -72,6 +75,38 @@
               "include": "#fieldList"
             }
           ]
+        }
+      ]
+    },
+    "directive": {
+      "patterns": [
+        {
+          "name": "markup.raw",
+          "begin": "^\\.\\. (?=[-\\w]+:: +.*$)",
+          "end": "^$",
+          "patterns": [
+            {
+              "include": "#dirMarkerLine"
+            },
+            {
+              "include": "#fieldList"
+            }
+          ]
+        }
+      ]
+    },
+    "dirMarkerLine": {
+      "patterns": [
+        {
+          "match": "([-\\w]+):: (.*)",
+          "captures": {
+            "1": {
+              "name": "variable.name"
+            },
+            "2": {
+              "name": "string.unquoted"
+            }
+          }
         }
       ]
     },
