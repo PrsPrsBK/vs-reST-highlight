@@ -47,7 +47,7 @@
     "escapedBq": {
       "patterns": [
         {
-          "name": "invalid.deprecated",
+          "name": "constant.character.escape",
           "match": "\\`"
         }
       ]
@@ -58,7 +58,7 @@
           "match": "^ +:(\\w+): [\\s\\S]+$",
           "captures": {
             "1": {
-              "name": "invalid.deprecated"
+              "name": "variable.name"
             }
           }
         }
