@@ -211,7 +211,7 @@ so I passed on exhaust them.
 Backquote
 --------------------------------------------------------------------------------
 
-Expression for 'neither prefixed with ``\`` nor ``\``` is ``(?<![`\\\\])`[^_`]`` (backslash 4 times).
+Expression for 'neither prefixed with ``\`` nor ````` is ``(?<![`\\\\])`[^_`]`` (backslash 4 times).
 This allow us to handle escaped backquote in reST document.
 
 
