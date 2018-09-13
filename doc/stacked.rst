@@ -183,13 +183,43 @@ We also use parent 'repository', like a code below.
    }
 
 
-At first, 'Heading' has two type as block
+At first, 'Heading' had two type as block
 --------------------------------------------------------------------------------
 
-Maybe this is changed after non-indented block implemented.
+At first, 'Heading' had two type as block.
 
 * One begins with marker line. (if exists, detected at first, as heading block)
-* Another begins with heading text. (just as normal non-indented block, not as heading block)
+* Another begins with heading-line string. (just as normal non-indented block, not as heading block)
 * Both can not be indented. (this may be not good)
+
+And it was changed after non-indented block implemented,
+because the type does not begin with heading-line string becomes just block 
+which contains heading-line as second line.
+To Separate with 'just block' and assign heading-block specific field list, is impossible.
+So heading-blocks are all just block contain heading-line string by chance.
+
+
+Not exhaust directive specific args nor options
+--------------------------------------------------------------------------------
+
+We can still distinguish each reST directives, and assign each one's specific field list.
+But it involve many works and I believe there does not exist very much demand, 
+so I passed on exhaust them. 
+`knot: remove support for image directive and fieldlist · PrsPrsBK/vs-reST-highlight@d08b25d <https://github.com/PrsPrsBK/vs-reST-highlight/commit/d08b25d5df43788ac15af4f666f9c2245c3f36bb>`_
+
+
+Backquote
+--------------------------------------------------------------------------------
+
+Expression for 'neither prefixed with \\ nor \`' is '(?<![`\\\\])`[^_`]' (backslash 4 times).
+This allow us to handle escaped backquote in reST document.
+
+
+We can not handle both a link written in multiline and alone backquote
+--------------------------------------------------------------------------------
+
+I made a issue (2018-09-13 JST):
+`Syntax rule 'begin-end' stretch over too much, and extend it's parent range out · Issue #58551 · Microsoft/vscode <https://github.com/Microsoft/vscode/issues/58551>`_
+
 
 
