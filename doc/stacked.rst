@@ -218,8 +218,27 @@ This allow us to handle escaped backquote in reST document.
 We can not handle both a link written in multiline and alone backquote
 --------------------------------------------------------------------------------
 
-I made a issue (2018-09-13 JST):
+I made a issue (2018-09-13 JST UTC+0900):
 `Syntax rule 'begin-end' stretch over too much, and extend it's parent range out · Issue #58551 · Microsoft/vscode <https://github.com/Microsoft/vscode/issues/58551>`_
 
+Info.
+
+* `Microsoft/vscode-textmate: A library that helps tokenize text using Text Mate grammars. <https://github.com/Microsoft/vscode-textmate>`_
+* `TextMate - Text Editor for macOS <https://macromates.com/download>`_
+
+
+Decision: Exclude multiline link from targets of highlighting
+================================================================================
+
+I can not try original behavior of texmate, so can not distinguish it as bug  or not, in vscode-textmate.
+But reply is enough.
+
+* It need very many cost to clarify 'this is bug or not'.
+* In the case it is bug, fixing it may take a long time.
+* To change the behavior of engine should have effect on existing extensions for highlight. 
+  It may result in the long way to change the behavior, or the decision not to change.
+
+I do not intend to exhaust all highlighting targets and multiline link is not so important for me.
+I can decided to exclude the highlight for multiline link.
 
 
